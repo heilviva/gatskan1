@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Авторизация";
+    Layout = null;
+}
+
+<div class="tab">
+    <h2>Авторизация</h2>
+    <form method="post">
+        <label for="email">Email</label>
+        <input type="email" name="email" required />
+
+        <label for="password">Пароль</label>
+        <input type="password" name="password" required />
+
+        <button type="submit">Войти</button>
+    </form>
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+    }
+</div>
+
+<p>Еще нет аккаунта? <a asp-action="Register">Регистрация</a></p>

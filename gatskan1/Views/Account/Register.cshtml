@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    Layout = null;
+}
+<form method="post">
+    <label for="firstname">firstname</label>
+    <input type="text" name="firstname" required />
+
+    <label for="lastname">lastname</label>
+    <input type="text" name="lastname" required />
+
+    <label for="email">email</label>
+    <input type="email" name="email" required />
+
+    <label for="phone">phone</label>
+    <input type="text" name="phone" required />
+
+    <label for="password">password</label>
+    <input type="password" name="password" required />
+
+    <label for="address">address</label>
+    <input type="text" name="address" required />
+
+    <button type="submit">Sign up</button>
+
+</form>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    @ViewBag.ErrorMessage
+    ;
+}
+<p class="wt-1">
+
+    уже есть аккаунт?<a asp-action="Index">Авторизоваться</a>
+</p>

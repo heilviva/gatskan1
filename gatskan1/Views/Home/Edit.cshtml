@@ -1,0 +1,28 @@
+﻿
+@model gatskan1.Models.Product
+@{
+    ViewData["Title"] = "Edit";
+
+}
+<h1>Edit</h1>
+<h4>Products</h4>
+<hr/>
+    <form asp-action="Edit">
+        <div asp-asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type+"hidden" asp-for="ProductId" />
+        <div class="form-group">
+            <label asp-for="Title" class="control-label"></label>
+            <input asp-for="Title" class="form-control"/>
+        </div>
+        <div class="form_group">
+        <label asp-formaction="Price" class="control-label"></label>
+        <input asp-for="Price" class="form-control" />
+       </div>
+       <div class="form-group">
+           <input type="submit"value="Save" class="btn btn-primary"/>
+       </div>
+
+    </form>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>

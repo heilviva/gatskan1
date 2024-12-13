@@ -1,0 +1,71 @@
+﻿
+
+@model IEnumerable<gatskan1.Models.Product>
+@{
+    ViewBag.Title = "Все продукты";
+}
+
+<html>
+<head>
+    <
+    <meta name="yandex-verification" content="d6b4a83c9da60388" />
+</head>
+<body>
+</body>
+</html>
+
+<a asp-action="Create" asp-controller="Home">Добавить продукт</a>
+<table class="table">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>
+                <a asp-action="DetailsProduct" asp-controller="Home" asp-route-id="@item.ProductId">Подробнее</a> |
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.ProductId">Изменить</a> |
+                <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.ProductId">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+
+    <h1 class="display-4">О нас</h1>
+    <section class="about">
+        <p style="font-weight: bold">
+            Читай город это магазин будущего...
+        </p>
+        <div class="about-info">
+            <div class="about-img">
+                <img src="~/img/aboutus.webp" />
+            </div>
+            <div>
+                <p>
+                    «Читай-город» – это самая большая в России сеть книжных магазинов и интернет-магазин.
+                    Компания входит в объединённую розничную сеть «Читай-город» – «Гоголь-Моголь» – «Буквоед».
+
+                    Мы не просто продаём книги, а разделяем любовь наших покупателей к чтению.
+                    Нам знакомо чувство, когда хорошие романы заканчиваются слишком быстро,
+                    времени в дороге не хватает, чтобы дочитать главу, а героиня никак не может найти свою любовь.
+                    Мы знаем, как быстро летит время в компании с новинкой любимого автора и как сильно хочется
+                    растянуть это удовольствие.
+
+                    Помимо книг в «Читай-город» можно найти канцтовары, сладости, подарочную упакову
+                    и идеи для сюрпризов близким. Мы сами разрабатываем дизайны для многих ежедневников,
+                    закладок, товаров для творчества и других интересных вещей, поэтому кроме как в «Читай-город»
+                    их больше нигде не найти.
+                </p>
+                <button><a asp-action="Index" asp-controller="Catalog">Посмотреть каталог</a> </button>
+            </div>
+        </div>
+    </section>
+
+
+</div>
